@@ -19,14 +19,14 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
         $conn = $conexion->conectar();
 
         $datos = $conn->query('SELECT * FROM empleado');
-        $resultado = $datos->fetchAll();
+        $resultados = $datos->fetchAll();
 
-        switch($GET["type"]){
+        switch($_GET["type"]){
             case "json":
-                result_json($resultado);
+                result_json($resultados);
             break;
             case "xml";
-                result_xml($resultado);
+                result_xml($resultados);
             break;
             default;
                 echo("Por Favor, defina el tipo de resultado");
