@@ -9,7 +9,7 @@ class conexion{
     public $port = '3306';
     public $charset = 'utf8mb4';
     public $options = [
-        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXEPTIONS,
+        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXEPTION,
         \PDO::ATTR_DEFAULT_FETCH_MOD => \PDO::FETCH_ASSOC,
         \PDO::ATTR_EMULATE_PREPARES => false
     ];
